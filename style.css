@@ -5,6 +5,12 @@
 body{
     color:white;
 }
+h{
+    font-size:3rem;
+}
+p{
+    font-size: 1.5rem;
+}
 .flexrow{
     display:flex;
     justify-content: center;
@@ -23,6 +29,7 @@ body{
     
 }
 .Page{
+    /* height:100vh; */
     align-content: center;
     width:100vw;
     justify-content: space-evenly;
@@ -65,4 +72,31 @@ body{
     background-position: center;
     box-shadow: 0 0 4px #fff;
     cursor:pointer
+}
+@media screen and (width<=1024px){
+    .Page{
+        flex-direction: column;
+        /* better property than margin and all(usse ht change hoti hai kyuki) */
+        padding-block:40px;
+        /* flex-basis: 80%; ye col ke direction mai krdenga */ 
+        gap:12px;
+        height:100%;
+    }
+    .left{
+        align-items: center;
+        justify-content: center;
+        width:80%;
+    }
+    .right{
+        width:80%;
+        height:100%;
+
+    }
+    .box{
+        grid-column:span 3;
+        grid-row:span 1;
+        height:220px;
+        font-size:1.5rem;
+
+    }
 }
